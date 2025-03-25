@@ -11,7 +11,7 @@ import javax.ws.rs.core.MediaType;
 
 public class WeatherDao {
     private static final String API_KEY = "6dbbd747934e44bf84312529252303"; // Replace with your actual API key
-    private static final String BASE_URL = "http://api.weatherapi.com/v1/current.json";
+    private static final String BASE_URL = "https://api.weatherapi.com/v1/current.json";
 
     public Response getWeather(String location) {
         Client client = ClientBuilder.newClient();
@@ -26,7 +26,8 @@ public class WeatherDao {
         try {
             weatherResponse = mapper.readValue(responseJson, Response.class);
         } catch (JsonProcessingException e) {
-            e.printStackTrace(); // Handle this properly in production
+            // TODO - add log4j
+            e.printStackTrace();
         }
 
         return weatherResponse;
