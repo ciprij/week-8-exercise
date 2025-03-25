@@ -9,10 +9,19 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 
+/**
+ * The type Weather dao.
+ */
 public class WeatherDao {
     private static final String API_KEY = "6dbbd747934e44bf84312529252303"; // Replace with your actual API key
     private static final String BASE_URL = "https://api.weatherapi.com/v1/current.json";
 
+    /**
+     * Gets weather.
+     *
+     * @param location the location
+     * @return the weather
+     */
     public Response getWeather(String location) {
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(BASE_URL)
