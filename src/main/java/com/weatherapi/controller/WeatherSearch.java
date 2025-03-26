@@ -1,7 +1,7 @@
-package controller;
+package com.weatherapi.controller;
 
-import persistence.WeatherDao;
-import com.weatherapi.Response;
+import com.weatherapi.persistence.WeatherDao;
+import com.weatherapi.entity.Response;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

@@ -1,4 +1,4 @@
-package persistence;
+package com.weatherapi.persistence;
 
 import org.junit.Test;
 
